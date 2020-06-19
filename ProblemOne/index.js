@@ -56,8 +56,24 @@ var arr = [
 ];
 
 function mutateArray(a) {
-    return a;
+  var newarr = [];
+for(var k in a) {
+  var item = a[k];   
+  var item_sum = 0;
+    for(var j in item.guest_booking.some_array) {
+      item_sum += item.guest_booking.some_array[j];
+    }
+    newarr.push({ 
+      "guest_type" : item.guest_type, 
+      "first_name" :  item.first_name, 
+      "last_name" :  item.last_name,
+      "room_no" :  item.guest_booking.room_no,
+      "some_total" : item_sum
+    });
 }
+    return newarr;
+}
+
 
 $(document).ready(function() {
     $('#originalArray').html(JSON.stringify(arr, null, 2));
