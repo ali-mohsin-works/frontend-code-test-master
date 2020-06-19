@@ -56,7 +56,18 @@ var arr = [
 ];
 
 function mutateArray(a) {
-    return a;
+  var newarr = [];
+  for(var k in a) {
+    var item = a[k];   
+    newarr.push({ 
+        "guest_type": item.guest_type, 
+        "first_name":  item.first_name, 
+        "last_name":  item.last_name,
+        "room_no":  item.guest_booking.room_no,
+        "some_array": item.guest_booking.some_array
+      });
+  }
+  return newarr;
 }
 
 $(document).ready(function() {
