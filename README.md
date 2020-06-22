@@ -1,4 +1,7 @@
 # frontend-code-test-master
+In the project directory ProblemOne and ProblemTwo, you can run:
+### `npm install`
+
 
 For ProblemOne :
 
